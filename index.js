@@ -28,6 +28,9 @@ app.use(
 
 app.use(bodyParser.json());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("ok");
+});
 // use router
 app.use("/api/user", userRoute);
 // app.use('/posts', postRoute);
